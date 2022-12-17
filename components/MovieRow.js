@@ -16,9 +16,11 @@ const MovieRow = ({ fetchUrl, title }) => {
   return (
     <div className="py-2 px-16">
       <div className="flex items-center gap-2 justify-start pb-2">
-        <p className="font-semibold text-yellow-500 text-xl">Store</p>
-        <p className="font-bold text-white text-xl">{title}</p>
-        <p className=" font-light text-blue-500 text-xs">See more</p>
+        <p className="font-bold text-yellow-500 text-xl">Store</p>
+        <p className="font-semibold text-white text-xl">{title}</p>
+        <p className=" font-normal text-blue-400 text-xs hover:underline hover:underline-offset-2 cursor-pointer">
+          See more
+        </p>
       </div>
 
       {/* posters */}
