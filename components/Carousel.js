@@ -1,0 +1,35 @@
+/* eslint-disable @next/next/no-img-element */
+import React, { Component } from "react";
+import { CarouselData } from "./CarouselData";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import Swipe from "react-easy-swipe";
+
+class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentSlide: 0,
+    };
+  }
+
+  render() {
+    return (
+      <div className="pt-32">
+        <div className="max-w-lg h-72 flex overflow-hidden relative">
+          {CarouselData.map((slide, index) => {
+            return (
+              <img
+                src={slide.image}
+                alt="This is a carousel slide"
+                key={index}
+                className={index === this.state.currentSlide ? "block w-full h-auto object-cover" : "hidden"}
+              />
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Carousel;
